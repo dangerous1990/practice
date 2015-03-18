@@ -7,8 +7,6 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import org.springframework.dao.DeadlockLoserDataAccessException;
-
 /**
  * 找出dna中重复的串
  * 
