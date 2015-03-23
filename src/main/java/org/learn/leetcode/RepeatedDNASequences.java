@@ -22,6 +22,7 @@ public class RepeatedDNASequences {
 	 * @return
 	 */
 	public List<String> findRepeatedDnaSequences(String s) {
+		
 
 		List<String> list = new ArrayList<String>();
 		for (int i = 0; i < s.length() - 10; i++) {
@@ -44,7 +45,7 @@ public class RepeatedDNASequences {
 	}
 
 	/**
-	 * 内存超出
+	 * 通过
 	 * 
 	 * @param s
 	 * @return
