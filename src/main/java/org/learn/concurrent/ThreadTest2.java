@@ -1,5 +1,10 @@
-package org.learn.collection;
+package org.learn.concurrent;
 
+/**
+ * 一个对象的2个同步方法,多条线程可以调用一个对象不同的同步方法
+ * @author admin
+ *
+ */
 public class ThreadTest2 {
 	public static void main(String[] args) {
 		Example1 example = new Example1();
