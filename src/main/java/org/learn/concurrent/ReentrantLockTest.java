@@ -8,7 +8,7 @@ public class ReentrantLockTest {
     
     public void execute() {
         if (lock.isLocked()) {
-            System.out.println(Thread.currentThread().getName()+"锁正在被使用，无法获得锁");
+            System.out.println("当前线程："+Thread.currentThread().getName()+"，锁正在被使用，无法获得锁");
         }
         lock.lock();
         try {
@@ -16,8 +16,6 @@ public class ReentrantLockTest {
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
                 }
                 System.out.println(Thread.currentThread().getName()+i);
             }
@@ -29,16 +27,14 @@ public class ReentrantLockTest {
     
     public void execute2() {
         if (lock.isLocked()) {
-            System.out.println(Thread.currentThread().getName()+"锁正在被使用，无法获得锁");
+            System.out.println("当前线程："+Thread.currentThread().getName()+"，锁正在被使用，无法获得锁");
         }
         lock.lock();
         try {
             for (int i = 0; i < 5; i++) {
                 try {
-                    Thread.sleep(1000);
+                    Thread.sleep(1500);
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
                 }
                 System.out.println(Thread.currentThread().getName()+i);
             }
