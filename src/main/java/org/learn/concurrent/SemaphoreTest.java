@@ -6,7 +6,12 @@ import java.util.concurrent.Executors;
 
 import java.util.concurrent.Semaphore;
 
-public class TestSemaphore {
+/**
+ * 信号量 用于多个用户
+ * @author Administrator
+ *
+ */
+public class SemaphoreTest {
 
 	public static void main(String[] args) {
 
@@ -31,18 +36,18 @@ public class TestSemaphore {
 					try {
 
 						// 获取许可
-
+						System.out.println(NO+"正在获取许可");
 						semp.acquire();
-
-						System.out.println("Accessing: " + NO);
+						System.out.println(NO+"获取到许可");
 
 						Thread.sleep((long) (Math.random() * 10000));
 
 						// 访问完后，释放
 
 						semp.release();
+						System.out.println("释放一个许可");
 
-						System.out.println("-----------------" + semp.availablePermits());
+						System.out.println("-------当天空闲许可----------" + semp.availablePermits());
 
 					} catch (InterruptedException e) {
 
