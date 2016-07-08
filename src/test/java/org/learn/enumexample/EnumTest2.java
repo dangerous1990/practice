@@ -1,6 +1,7 @@
 package org.learn.enumexample;
 
 import org.junit.Test;
+import org.learn.jdk.lang.enu.Food;
 
 public class EnumTest2 {
 	public enum Season {

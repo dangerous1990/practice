@@ -9,6 +9,8 @@ import java.util.Map.Entry;
 import java.util.Set;
 
 import org.junit.Test;
+import org.learn.jdk.lang.enu.ColorEnum;
+import org.learn.jdk.lang.enu.WeekEnum;
 
 /**
  * @author admin
