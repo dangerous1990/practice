@@ -13,6 +13,7 @@ import java.util.Iterator;
  */
 public class NIOClient {
     
+    
     // 通道管理器
     private Selector selector;
     
@@ -45,13 +46,12 @@ public class NIOClient {
      * 
      * @throws IOException
      */
-    @SuppressWarnings("unchecked")
     public void listen() throws IOException {
         // 轮询访问selector
         while (true) {
             selector.select();
             // 获得selector中选中的项的迭代器
-            Iterator ite = this.selector.selectedKeys().iterator();
+            Iterator<SelectionKey> ite = this.selector.selectedKeys().iterator();
             while (ite.hasNext()) {
                 SelectionKey key = (SelectionKey) ite.next();
                 // 删除已选的key,以防重复处理

@@ -11,6 +11,7 @@ public class OutOfMemoryHeapTest {
     public static void main(String[] args) {
         int max = Integer.MAX_VALUE;
         int[] arrays = new int[max];// Requested array size exceeds VM limit
+        System.out.println(arrays.length);
         // int[] arrays = new int[max-2];//java.lang.OutOfMemoryError: Java heap space
     }
 }
