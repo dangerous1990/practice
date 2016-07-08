@@ -2,6 +2,7 @@ package org.learn.pattern.facecade;
 
 public class Computer {
     
+    
     private CPU cpu;
     
     private Disk disk;

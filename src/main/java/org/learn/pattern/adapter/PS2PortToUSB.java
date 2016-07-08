@@ -7,6 +7,7 @@ package org.learn.pattern.adapter;
  */
 public class PS2PortToUSB implements USBPort {
     
+    
     private PS2Port ps2;
     
     public PS2PortToUSB(PS2Port ps2) {

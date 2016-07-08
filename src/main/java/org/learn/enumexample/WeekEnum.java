@@ -6,8 +6,13 @@ package org.learn.enumexample;
  * java.lang.Enum（java是单一继承）,可以实现接口
  * 
  * @author admin
- *
  */
 public enum WeekEnum {
-	MON, TUE, WED, THU, FRI, SAT, SUN;// 此处调用了Enum(String name ,int ordinal)
+    MON,
+    TUE,
+    WED,
+    THU,
+    FRI,
+    SAT,
+    SUN;// 此处调用了Enum(String name ,int ordinal)
 }

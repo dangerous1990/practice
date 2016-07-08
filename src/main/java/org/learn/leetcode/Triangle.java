@@ -11,6 +11,7 @@ import java.util.List;
  */
 public class Triangle {
     
+    
     public static List<List<Integer>> generate(int numRows) {
         
         int[][] yh = new int[numRows][numRows];

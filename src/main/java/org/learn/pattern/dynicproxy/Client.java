@@ -1,7 +1,7 @@
 package org.learn.pattern.dynicproxy;
 
-
 public class Client {
+    
     public static void main(String[] args) {
         BookManager manager = new BookManagerImpl();
         Proxy proxy = new Proxy();

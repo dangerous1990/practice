@@ -2,6 +2,7 @@ package org.learn.pattern.Memento;
 
 public class Originer implements Cloneable {
     
+    
     private String state;
     
     public Originer(String state) {

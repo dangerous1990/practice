@@ -2,6 +2,7 @@ package org.learn.pattern.builder;
 
 public class Builder implements IBuilder {
     
+    
     private Product p;
     
     public Builder() {

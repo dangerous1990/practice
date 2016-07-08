@@ -2,13 +2,19 @@ package org.learn.concurrent;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 比synchronized关键字更灵活
+ * 
+ * @author Administrator
+ */
 public class ReentrantLockTest {
+    
     
     private ReentrantLock lock = new ReentrantLock();
     
     public void execute() {
         if (lock.isLocked()) {
-            System.out.println("当前线程："+Thread.currentThread().getName()+"，锁正在被使用，无法获得锁");
+            System.out.println("当前线程：" + Thread.currentThread().getName() + "，锁正在被使用，无法获得锁");
         }
         lock.lock();
         try {
@@ -17,7 +23,7 @@ public class ReentrantLockTest {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
                 }
-                System.out.println(Thread.currentThread().getName()+i);
+                System.out.println(Thread.currentThread().getName() + i);
             }
             
         } finally {
@@ -27,7 +33,7 @@ public class ReentrantLockTest {
     
     public void execute2() {
         if (lock.isLocked()) {
-            System.out.println("当前线程："+Thread.currentThread().getName()+"，锁正在被使用，无法获得锁");
+            System.out.println("当前线程：" + Thread.currentThread().getName() + "，锁正在被使用，无法获得锁");
         }
         lock.lock();
         try {
@@ -36,7 +42,7 @@ public class ReentrantLockTest {
                     Thread.sleep(1500);
                 } catch (InterruptedException e) {
                 }
-                System.out.println(Thread.currentThread().getName()+i);
+                System.out.println(Thread.currentThread().getName() + i);
             }
         } finally {
             lock.unlock();
@@ -54,6 +60,7 @@ public class ReentrantLockTest {
 
 class ThreadLock implements Runnable {
     
+    
     private ReentrantLockTest test;
     
     public ThreadLock(ReentrantLockTest test) {
@@ -67,6 +74,7 @@ class ThreadLock implements Runnable {
 }
 
 class ThreadLock2 implements Runnable {
+    
     
     private ReentrantLockTest test;
     

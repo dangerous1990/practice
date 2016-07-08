@@ -2,6 +2,7 @@ package org.learn.pattern.facecade;
 
 public class CPU {
     
+    
     public void startup() {
         System.out.println("cpu startup!");
     }

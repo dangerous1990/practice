@@ -7,5 +7,6 @@ package org.learn.pattern.adapter;
  */
 public interface PS2Port {
     
+    
     void workWithPS2Port();
 }

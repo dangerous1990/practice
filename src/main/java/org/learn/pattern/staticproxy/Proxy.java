@@ -2,6 +2,7 @@ package org.learn.pattern.staticproxy;
 
 public class Proxy implements BookManager {
     
+    
     private BookManager manager;
     
     public Proxy() {

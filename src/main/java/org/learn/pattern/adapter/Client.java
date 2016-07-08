@@ -2,9 +2,11 @@ package org.learn.pattern.adapter;
 
 public class Client {
     
+    
     public static void main(String[] args) {
         // 1.我现在有一个PS2接口
         PS2Port ps2Port = new PS2Port() {
+            
             
             @Override
             public void workWithPS2Port() {

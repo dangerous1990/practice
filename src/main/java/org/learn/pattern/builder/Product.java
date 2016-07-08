@@ -2,6 +2,7 @@ package org.learn.pattern.builder;
 
 public class Product {
     
+    
     private int age;
     
     private String name;

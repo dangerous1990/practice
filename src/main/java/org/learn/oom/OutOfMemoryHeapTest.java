@@ -2,10 +2,11 @@ package org.learn.oom;
 
 /**
  * 数组，静态变量，成员变量 存储在堆中
+ * 
  * @author admin
- *
  */
 public class OutOfMemoryHeapTest {
+    
     
     public static void main(String[] args) {
         int max = Integer.MAX_VALUE;
