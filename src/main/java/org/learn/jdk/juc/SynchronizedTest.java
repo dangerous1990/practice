@@ -20,29 +20,30 @@ public class SynchronizedTest {
         Thread t2 = new SynchronizedThread(example, 0);
         t1.start();
         t2.start();
+        
         try {
-            Thread.sleep(10000l);
+            t1.join();
+            t2.join();
         } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
     }
     
     /**
      * 一个对象的多个同步方法,一个线程可以访问一个同步方法，其他线程必须等待另一个线程执行完同步方法才能抢占锁
+     * 相当于 synchronized(this)
      */
     @Test
     public void test1() {
         Example example = new Example();
         Thread t3 = new SynchronizedThread(example, 0);
         Thread t4 = new SynchronizedThread(example, 0);
-        Thread t5 = new SynchronizedThread(example, 0);
-        Thread t6 = new SynchronizedThread(example, 0);
         t3.start();
         t4.start();
-        t5.start();
-        t6.start();
         try {
-            Thread.sleep(100000l);
+            t3.join();
+            t4.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -59,7 +60,8 @@ public class SynchronizedTest {
         t3.start();
         t4.start();
         try {
-            Thread.sleep(100000l);
+            t3.join();
+            t4.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
@@ -98,6 +100,7 @@ class Example {
     public void execute2() {
         System.out.println(Thread.currentThread().getName() + "正在等待另一个线程释放锁");
         synchronized (object) {
+            System.out.println(Thread.currentThread().getName()+"获取到锁");
             for (int i = 0; i < 5; ++i) {
                 try {
                     Thread.sleep((long) Math.random() * 1000);
@@ -114,6 +117,7 @@ class Example {
     public void execute3() {
         System.out.println(Thread.currentThread().getName() + "正在等待另一个线程释放锁");
         synchronized (object) {
+            System.out.println(Thread.currentThread().getName()+"获取到锁");
             for (int i = 0; i < 5; ++i) {
                 try {
                     Thread.sleep((long) Math.random() * 1000);
