@@ -35,4 +35,18 @@ public class MoveZeros {
             }
         }
     }
+
+    /**
+     * 1ms From discuss
+     * @param nums
+     */
+    public void moveZeroesWith1ms(int[] nums) {
+        int C = 0;  // count of zeros
+        int N = nums.length;
+        for (int i = 0; i < N; i++) {
+            if (nums[i] == 0)   C++;
+            else if (C != 0)    nums[i-C] = nums[i];
+        }
+        for (int i = N-C; i < N; i++)   nums[i] = 0;
+    }
 }
