@@ -8,26 +8,9 @@ import java.util.List;
  * Created by Administrator on 2016/8/8.
  */
 public class ContainsDuplicate {
-    /**
-     * time limit
-     * list.contains//遍历所有元素判断是否存在
-     *
-     * @param nums
-     * @return
-     */
-    public boolean containsDuplicate(int[] nums) {
-        List<Integer> list = new ArrayList<>(nums.length);
-        for (int num : nums) {
-            if (list.contains(num)) {
-                return true;
-            } else {
-                list.add(num);
-            }
-        }
-        return false;
-    }
 
     /**
+     * 排序，判断连续2个位置是否相等
      * 6ms
      * @param nums
      * @return
