@@ -6,8 +6,7 @@ package org.learn.leetcode;
  */
 public class NimGame {
 
-    public boolean canWinNim(int n) {
-
+    public boolean canWinNim2(int n) {
         return !(n % 4 == 0);
     }
 }
