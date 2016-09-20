@@ -14,6 +14,7 @@ public class TopKFrequentElements {
      * 统计数量
      * 按照数量排序
      * 取得前K个数量最多的元素
+     *
      * @param nums
      * @param k
      * @return
@@ -45,4 +46,5 @@ public class TopKFrequentElements {
     public void test() {
         System.out.println(topKFrequent(new int[]{1, 1, 1, 2, 2, 3}, 2));
     }
+
 }
