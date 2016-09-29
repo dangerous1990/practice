@@ -11,7 +11,7 @@ public class ToHex {
         if (num == 0) return "0";
         String result = "";
         while (num != 0) {
-            result = map[(num & 15)] + result;
+            result = map[(num & 0x0F)] + result;
             num = (num >>> 4);
         }
         return result;
