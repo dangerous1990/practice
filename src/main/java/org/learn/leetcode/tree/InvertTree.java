@@ -1,4 +1,6 @@
-package org.learn.leetcode;
+package org.learn.leetcode.tree;
+
+import org.learn.leetcode.tree.TreeNode;
 
 /**
  * Created by Administrator on 2016/8/2.

@@ -29,6 +29,30 @@ public class CountBits {
         return result;
     }
 
+    public int[] countBitsWithBit(int num) {
+        int[] result = new int[num + 1];
+        for (int i = 0; i <= num; i++) {
+            int count = 0;
+            int j = i;
+            while (j > 0) {
+                if ((j & 1) == 1) {
+                    count++;
+                }
+                j = j >> 1;
+            }
+            result[i] = count;
+        }
+        return result;
+    }
+
+    @Test
+    public void testCountBitsWithBit() {
+        int[] x = countBitsWithBit(2);
+        for (int t : x) {
+            System.out.println(t);
+        }
+    }
+
     public int[] countBits3ms(int num) {
         int[] result = new int[num + 1];
         for (int i = 1; i <= num; i++) {
@@ -41,11 +65,4 @@ public class CountBits {
         return result;
     }
 
-    @Test
-    public void test() {
-        int[] result = countBits(5);
-        for (int i : result) {
-            System.out.println(i);
-        }
-    }
 }

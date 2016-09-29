@@ -1,4 +1,6 @@
-package org.learn.leetcode;
+package org.learn.leetcode.tree;
+
+import org.learn.leetcode.tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,16 +8,17 @@ import java.util.List;
 /**
  * Created by Administrator on 2016/8/9.
  */
-public class BinaryTreeInorderTraversal {
+public class BinaryTreePreorderTraversal {
+
     private List<Integer> result = new ArrayList<>();
 
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal(TreeNode root) {
         if (root == null) {
             return result;
         } else {
-            inorderTraversal(root.left);
             result.add(root.val);
-            inorderTraversal(root.right);
+            preorderTraversal(root.left);
+            preorderTraversal(root.right);
         }
         return result;
     }
