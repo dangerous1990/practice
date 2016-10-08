@@ -2,6 +2,7 @@ package org.learn.leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 /**
@@ -27,6 +28,23 @@ public class ContainsDuplicate {
         Arrays.sort(nums);
         for (int i = 0; i < nums.length - 1; i++) {
             if (nums[i] == nums[i + 1]) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 排序，判断连续2个位置是否相等
+     * 6ms
+     *
+     * @param nums
+     * @return
+     */
+    public boolean containsDuplicateWithSet(int[] nums) {
+        HashSet<Integer> set = new HashSet<Integer>(nums.length);
+        for (int i = 0; i < nums.length; i++) {
+            if (!set.add(nums[i])) {
                 return true;
             }
         }
