@@ -1,4 +1,6 @@
-package org.learn.leetcode;
+package org.learn.leetcode.list;
+
+import org.learn.leetcode.list.ListNode;
 
 import java.util.ArrayList;
 import java.util.Random;

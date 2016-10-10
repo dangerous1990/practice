@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.list;
 
 /**
  * Created by Administrator on 2016/8/9.

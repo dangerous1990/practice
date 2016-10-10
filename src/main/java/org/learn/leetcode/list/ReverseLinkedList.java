@@ -1,7 +1,6 @@
-package org.learn.leetcode;
+package org.learn.leetcode.list;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.learn.leetcode.list.ListNode;
 
 /**
  * Created by Administrator on 2016/8/9.
