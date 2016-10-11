@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.integer;
 
 /**
  * Created by Administrator on 2016/9/27.

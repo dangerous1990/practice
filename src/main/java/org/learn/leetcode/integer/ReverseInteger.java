@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.integer;
 
 import org.junit.Assert;
 import org.junit.Test;

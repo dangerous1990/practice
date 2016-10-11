@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.array;
 
 import java.util.Arrays;
 

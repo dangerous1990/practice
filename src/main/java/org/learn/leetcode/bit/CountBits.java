@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.bit;
 
 import org.junit.Test;
 

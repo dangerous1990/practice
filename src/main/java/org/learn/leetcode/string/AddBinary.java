@@ -1,4 +1,4 @@
-package org.learn.leetcode;
+package org.learn.leetcode.string;
 
 /**
  * https://leetcode.com/problems/add-binary/
