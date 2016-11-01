@@ -4,7 +4,7 @@ import org.junit.Test;
 
 /**
  * https://leetcode.com/problems/minimum-path-sum/
- * 根据规则只能向左或者向下移动，第一行只能加左边，第一列只能加上边
+ * 根据规则只能向右或者向下移动，第一行只能加左边，第一列只能加上边
  * 其他行 取上或者左边的最小值加上本身的值 dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1]);
  * Created by Administrator on 2016/11/1.
  */
@@ -25,12 +25,6 @@ public class MinimumPathSum {
                     dp[i][j] = grid[i][j] + Math.min(dp[i - 1][j], dp[i][j - 1]);
                 }
             }
-        }
-        for (int i = 0; i < dp.length; i++) {
-            for (int j = 0; j < dp[0].length; j++) {
-                System.out.print(dp[i][j]);
-            }
-            System.out.println();
         }
         return dp[grid.length - 1][grid[0].length - 1];
     }
