@@ -3,6 +3,7 @@ package org.learn.leetcode.dp;
 import org.junit.Test;
 
 /**
+ * 类似于爬楼梯 dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
  * Created by Administrator on 2016/11/1.
  */
 public class UniquePaths {

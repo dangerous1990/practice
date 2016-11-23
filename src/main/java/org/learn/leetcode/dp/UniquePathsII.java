@@ -3,6 +3,7 @@ package org.learn.leetcode.dp;
 import org.junit.Test;
 
 /**
+ * 判断是障碍物置0
  * Created by Administrator on 2016/11/1.
  */
 public class UniquePathsII {
